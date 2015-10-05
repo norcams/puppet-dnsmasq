@@ -1,4 +1,5 @@
 class dnsmasq::params {
+  $package_ensure = 'installed'
   case $::osfamily {
     debian: {
       $package_name = 'dnsmasq'
