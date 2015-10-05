@@ -1,5 +1,6 @@
-class dnsmasq {
-  include dnsmasq::params
+class dnsmasq(
+  $package_ensure = $dnsmasq::params::package_ensure,
+) inherits dnsmasq::params {
 
   anchor { 'dnsmasq::start': }
 
